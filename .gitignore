@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+"audio attack"/dataset/
+"audio attack"/trueModel/
+"audio attack"/source/
+TUAP/data/LibriSpeech/
+TUAP/epitran-master/
+TUAP/model/
+
+TUAP/data/
+TUAP/data_list.npy

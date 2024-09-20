@@ -1,0 +1,493 @@
+
+/* use Gentium Plus - Regular in .woff format */
+@font-face {
+  font-family: GentiumPlusW;
+  src: url(../fonts/GentiumPlus-Regular.woff2);
+}
+/* use Gentium Plus - Italic in .woff2 format */
+@font-face {
+  font-family: GentiumPlusW;
+  font-style: italic;
+  src: url(../fonts/GentiumPlus-Italic.woff2);
+}
+/* use Gentium Plus - Bold in .woff2 format */
+@font-face {
+	font-family: GentiumPlusW;
+	font-weight: bold;
+	src: url(../fonts/GentiumPlus-Bold.woff2);
+}
+/* use Gentium Plus - Bold Italic in .woff2 format */
+@font-face {
+	font-family: GentiumPlusW;
+	font-weight: bold;
+	font-style: italic;
+	src: url(../fonts/GentiumPlus-BoldItalic.woff2);
+}
+
+
+:root {
+  --base-blue: #003566;
+  --dark-blue: #001D3D;
+  --very-dark-blue: #000814;
+  --light-blue: #0E63B3;
+  --very-light-blue: #7AB5E6;
+  --base-yellow: #FFC300;
+  --dark-yellow: #E3930D;
+  --light-yellow: #FFD60A;
+}
+
+html[data-theme="light"] {
+  --sd-color-primary: var(--base-blue);
+  --mfa-admonition-text-color: #cecece;
+  --sd-color-dark: var(--base-blue);
+  --sd-color-primary-text: #FFC300;
+  --sd-color-primary-highlight: #FFC300;
+  --pst-color-primary: var(--base-blue);
+  --pst-color-warning: var(--light-yellow);
+  --pst-color-info: var(--light-blue);
+  --pst-color-admonition-default: var(--light-blue);
+
+ --pst-color-link: var(--light-blue);
+ --pst-color-link-hover: var(--dark-blue);
+
+ --pst-color-active-navigation: var(--dark-blue);
+ --pst-color-hover-navigation: var(--base-yellow);
+
+ --pst-color-navbar-link: var(--base-blue);
+ --pst-color-navbar-link-hover: var(--pst-color-hover-navigation);
+ --pst-color-navbar-link-active: var(--pst-color-active-navigation);
+
+ --pst-color-sidebar-link: var(--base-blue);
+ --pst-color-sidebar-caption: var(--base-blue);
+ --pst-color-sidebar-link-hover: var(--pst-color-hover-navigation);
+ --pst-color-sidebar-link-active: var(--pst-color-active-navigation);
+
+ --pst-color-toc-link: var(--base-blue);
+ --pst-color-toc-link-hover: var(--pst-color-hover-navigation);
+ --pst-color-toc-link-active: var(--pst-color-active-navigation);
+}
+/*******************************************************************************
+* dark theme
+*
+* all the variables used for dark theme coloring
+*/
+html[data-theme="dark"] {
+  --sd-color-primary: var(--base-blue);
+  --sd-color-card-text: var(--base-yellow);
+  --sd-color-dark: var(--base-blue);
+  --sd-color-primary-text: var(--base-yellow);
+  --sd-color-primary-highlight: var(--base-yellow);
+  --pst-color-primary: var(--base-yellow);
+  --pst-color-warning: var(--light-yellow);
+  --pst-color-info: var(--light-blue);
+--mfa-admonition-text-color: var(--pst-color-text-base);
+    --pst-color-link: var(--very-light-blue);
+    --pst-color-link-hover: var(--light-yellow);
+
+    --pst-color-active-navigation: var(--base-yellow);
+    --pst-color-hover-navigation: var(--very-light-blue);
+
+    --pst-color-navbar-link: var(--light-blue);
+    --pst-color-navbar-link-hover: var(--pst-color-hover-navigation);
+    --pst-color-navbar-link-active: var(--pst-color-active-navigation);
+
+    --pst-color-sidebar-link: var(--base-yellow);
+    --pst-color-sidebar-caption: var(--base-yellow);
+    --pst-color-sidebar-link-hover: var(--pst-color-hover-navigation);
+    --pst-color-sidebar-link-active: var(--pst-color-active-navigation);
+
+    --pst-color-toc-link: var(--base-yellow);
+    --pst-color-toc-link-hover: var(--pst-color-hover-navigation);
+    --pst-color-toc-link-active: var(--pst-color-active-navigation);
+}
+
+
+.container, .bd-page-width, .container-xl, .container-lg {
+    max-width: 2400px !important;
+}
+
+.wy-nav-content {
+    max-width: 1200px !important;
+}
+.wy-table-responsive table td {
+    white-space: normal !important;
+}
+.wy-table-responsive {
+    overflow: visible !important;
+}
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+  white-space: normal;
+}
+
+div.dataTables_wrapper{
+display: block;
+   overflow: visible;
+}
+
+table.dataTable.consonant-chart, table.dataTable.vowel-chart {
+   display: table;
+   overflow: visible;
+   table-layout: fixed;
+}
+table.dataTable.consonant-chart tbody td, table.dataTable.vowel-chart tbody td {
+    padding: 0.2em;
+}
+table.dataTable.vowel-chart{
+   width: auto;
+}
+table.dataTable.consonant-chart{
+   width: 100%;
+}
+
+.submanner {
+font-weight: normal;
+float: right
+}
+.manner {
+float: left;
+}
+
+.consonant-chart td, .vowel-chart td {
+vertical-align: middle;
+text-align: center;
+}
+
+table.consonant-chart thead th, table.consonant-chart thead td {
+padding: 0.4em 0.5em;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.ipa-phone {
+  position: relative;
+  display: block;
+}
+.ipa-cell {
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ipa-cell.ipa-sonorant{
+justify-content: center;
+}
+.ipa-rounded, .ipa-unrounded, .ipa-voiceless, .ipa-voiced, .ipa-other{
+min-width: 35%;
+}
+.ipa-divider{
+min-width: 10%;
+line-height:1;
+}
+
+.tooltip {
+}
+
+/* Tooltip text */
+.ipa-phone .ipa-tooltip {
+  visibility: hidden;
+  width: auto;
+  top: 100%;
+  left: 50%;
+  background-color: #001D3D;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%);
+}
+
+.ipa-tooltip-line {
+    display: flex;
+    justify-content: space-between;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap;
+}
+
+.ipa-second-level{
+margin-left:10px;
+}
+
+.ipa-phone-text, .ipa-transcription, .ipa-bracket, ipa-inline, table.need code.docutils.literal {
+  font-family: "GentiumPlusW";
+  font-size: 1.1em;
+  font-weight: 500;
+ }
+
+table.need code.docutils.literal span.pre {
+margin: 0em 0.2em
+color: #7AB5E6;
+}
+
+.ipa-transcription, .ipa-bracket {
+color: #7AB5E6;
+}
+
+.ipa-highlight, .ipa-inline {
+color: var(--pst-color-inline-code);
+}
+
+.ipa-tooltip-key {
+font-weight: bold;
+color: #F2BC0C;
+margin-right: 10px;
+}
+
+.ipa-tooltip-value {
+font-weight: bold;
+color: var(--pst-color-inline-code);
+font-family: var(--pst-font-family-monospace);
+}
+
+.lexical-set {
+font-variant: small-caps;
+}
+
+.ipa-phone-checkbox {
+display: none;
+}
+
+.ipa-empty{
+    background-color: #000814;
+}
+
+.bd-main .bd-content .bd-article-container {
+overflow: visible;
+max-width: 100%;
+}
+
+.ipa-phone-text {
+border: solid 1px #000814;
+background-color: var(--base-blue);
+color: var(--base-yellow);
+font-size: 1.1em;
+margin: 5%;
+display: block;
+}
+
+html[data-theme="dark"] .ipa-phone-text {
+background-color: var(--light-blue);
+}
+
+.ipa-phone-text:hover, .ipa-phone-checkbox:checked + .ipa-phone-text {
+border: solid 1px #000814;
+background-color: #FFC300;
+color: #000814;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.ipa-phone-text:hover + .ipa-tooltip, .ipa-phone-checkbox:checked ~ .ipa-tooltip {
+  visibility: visible;
+}
+
+.sd-btn-primary{
+font-weight: bold;
+}
+
+.sd-btn-primary:hover{
+color: #003566 !important;
+}
+
+table.need {
+   background-color: #001D3D;
+   color: #FFC300;
+   width: 100%;
+   table-layout: fixed;
+}
+
+table.need td.side.right{
+   width: 0;
+   height: 50px;
+}
+
+table.need a,
+div.admonition a {
+   color: #7AB5E6;
+}
+
+table.need strong {
+   color: #FFC300;
+}
+
+table.need .needs_tags .needs_data {
+   color: var(--pst-color-inline-code);
+}
+
+.needs_side {
+   width: 0px;
+}
+
+.needs_image {
+   width: 200px;
+   position: absolute;
+   translate: -100%;
+   background: transparent;
+}
+
+table.need div[class*="highlight-"] {
+   margin: 1em 2.5em;
+}
+
+.ipa-dot, .ipa-icon{
+    color: var(--pst-color-primary);
+}
+
+.ipa-dot {
+    line-height: inherit!important;
+    vertical-align: middle;
+    font-size:0.5em;
+ }
+
+div.admonition {
+   background-color: #003566;
+   color: #FFC300;
+}
+
+.admonition.warning > .admonition-title::after,
+.admonition.note > .admonition-title::after,
+div.admonition.warning > .admonition-title::after,
+div.admonition.note > .admonition-title::after,
+div.admonition > .admonition-title::after {
+   color: var(--dark-blue);
+   width: 1em;
+   height: 1em;
+   left: 0.5em;
+}
+
+div.admonition.admonition-pronunciation-dictionaries p.admonition-title::after {
+   content: "\f891"
+}
+
+div.admonition.admonition-g2p-models p.admonition-title::after {
+   content: "\f519"
+}
+
+div.admonition.admonition-acoustic-models p.admonition-title::after {
+   content: "\f3c9"
+}
+
+div.admonition.admonition-language-models p.admonition-title::after {
+   content: "\f1ab"
+}
+
+table.need .admonition-title,
+div.admonition.warning > .admonition-title,
+div.admonition.note > .admonition-title,
+div.admonition p.admonition-title {
+   background-color: #FFC300;
+   color: #000814;
+}
+
+table.need p,
+div.admonition p {
+   color: var(--mfa-admonition-text-color);
+}
+
+table.need a:hover,
+div.admonition a:hover {
+   color: #7AB5E6;
+}
+
+table.need div.admonition li a {
+   font-size: 1.2em;
+}
+
+table.need.head {
+   background-color: #003566;
+   color: #FFC300;
+}
+
+.sd-btn-primary{
+   font-weight: bold;
+}
+
+.sd-btn-navigation{
+    background-color: #0E63B3;
+    border-color: #0E63B3;
+}
+
+.sd-btn-navigation:hover {
+    background-color: #FFC300;
+    border-color: #FFC300;
+    color: #000814;
+}
+
+.sd-btn-primary:hover{
+   color: var(--sd-color-primary) !important;
+}
+
+.i-navigation{
+    color: var(--sd-color-primary);
+    padding: 20px;
+}
+
+html[data-theme="dark"] .i-navigation{
+    color: var(--sd-color-primary-text);
+}
+
+.navbar-light .navbar-nav li a.nav-link:{
+   font-size: 1.15em;
+}
+
+.rst-table-cell{
+   width: 100%;
+   height: 100%;
+   display: inline-block;
+   text-align: center;
+}
+
+div[class*="highlight-"] {
+  text-align: left;
+}
+
+.ipa-inline {
+  font-family: "GentiumPlusW";
+  font-size: 1.1em;
+  font-weight: 500;
+ }
+
+.supported {
+   background-color: #E9F6EC;
+}
+
+.not-supported {
+   background-color: #FBEAEC;
+}
+#navbar-icon-links i.fa-github-square::before, i.fa-github-square::before {
+    color: inherit;
+}
+
+dt:target {
+   background-color: #FFD60A;
+}
+
+html[data-theme="dark"] .table-striped tbody tr:nth-of-type(2n+1) {
+   background-color: var(--dark-blue);
+}
+
+html[data-theme="dark"] table.dataTable tbody tr {
+   background-color: var(--very-dark-blue);
+}
+
+html[data-theme="dark"] .bd-content img:not(.only-dark):not(.dark-light)
+{
+   background: transparent;
+}
+
+html[data-theme="dark"] .sd-card-title
+{
+   color: var(--base-yellow) !important;
+}
+
+li::marker
+{
+   color: var(--base-blue) !important;
+}
+
+html[data-theme="dark"] li::marker
+{
+   color: var(--base-yellow) !important;
+}

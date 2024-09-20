@@ -1,0 +1,6 @@
+--2024-07-03 16:37:24--  https://bhpan.buaa.edu.cn/bhbucket/7f451e0d-3fa0-45ba-bb16-259db827cbbc/0E5A70B5394D41BD80D5EAD6626AC65C/1656C2A22E0F4528B8D41A8FCA1D4FBA?response-content-disposition=attachment%3B%20filename%2A%3Dutf-8%27%27driver%255f23%255f30frame%252d005.tar.gz
+Resolving bhpan.buaa.edu.cn (bhpan.buaa.edu.cn)... 219.239.227.67, 106.39.41.86
+Connecting to bhpan.buaa.edu.cn (bhpan.buaa.edu.cn)|219.239.227.67|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2024-07-03 16:37:24 ERROR 403: Forbidden.
+
